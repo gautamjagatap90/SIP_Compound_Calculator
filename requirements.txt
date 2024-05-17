@@ -58,7 +58,7 @@ cssselect==1.1.0
 cycler
 Cython
 cytoolz
-daal4py==2021.6.0
+daal4py
 dash==2.8.0
 dash-bootstrap-components==1.3.0
 dash-colorscales==0.0.4
