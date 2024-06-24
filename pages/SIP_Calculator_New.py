@@ -80,7 +80,8 @@ def generate_investment_data(initial_investment, monthly_investment, return_rate
         total_investment.append(cumulative_investment)
         total_ret = closing_balance[-1] - cumulative_investment
         total_return.append(total_ret)
-        percentage_return.append((total_ret / cumulative_investment) * 100 if cumulative_investment > 0 else 0)
+        percentage_ret = (total_ret / cumulative_investment) * 100 if cumulative_investment > 0 else 0
+        percentage_return.append(f"{round(percentage_ret, 0)}%")
 
         # Move to next month
         current_date += timedelta(days=30)
