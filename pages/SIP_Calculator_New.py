@@ -142,7 +142,7 @@ with col2:
     return_frequency = st.selectbox('Return Calculation Frequency', ['Monthly', 'Yearly'], index=0)
     return_label = 'Monthly Rate of Return (%)' if return_frequency == 'Monthly' else 'Annual Rate of Return (%)'
 with col3:
-    return_rate = st.number_input(return_label, min_value=0.0, max_value=100.0, step=0.1, value=4.0, format="%f")
+    return_rate = st.number_input(return_label, min_value=0.0, max_value=100.0, step=0.5, value=4.0, format="%f")
 
 # Generate Investment Data
 investment_data = generate_investment_data(initial_investment, monthly_investment, return_rate, return_frequency, investment_timing, start_date.strftime("%Y-%m-%d"), num_years, stop_investment_date, min_reinvestment)
